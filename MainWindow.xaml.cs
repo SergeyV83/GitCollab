@@ -27,7 +27,7 @@ namespace GitCollab
             string password = PasswordBox.Password;
 
             // БАГ: неправильная проверка логина и пароля
-            if (login == "admin" || password == "12345") // Должно быть && вместо ||
+            if (login == "admin" && password == "12345") // Должно быть && вместо ||
             {
                 MessageBox.Show("Авторизация успешна!", "Успех",
                                MessageBoxButton.OK, MessageBoxImage.Information);
@@ -41,8 +41,8 @@ namespace GitCollab
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Регистрация успешно завершена!", "Успех",
-            MessageBoxButton.OK, MessageBoxImage.Information);
+            WindowReg windowReg = new WindowReg();
+            windowReg.Show();
         }
     }
 }
