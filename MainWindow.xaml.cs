@@ -41,8 +41,8 @@ namespace GitCollab
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            WindowReg windowReg = new WindowReg();
-            windowReg.Show();
+            MessageBox.Show("Регистрация успешно завершена!", "Успех",
+            MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }
